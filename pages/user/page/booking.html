@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../fontawesome/css/all.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.js" crossorigin="anonymous"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-xl  px-4 py-0 fixed-top font_dangrek">
+            <a class="navbar-brand m-0 p-0" href="#" style="width: 80px;">
+                <img src="../img/logo/1.png" class="img-fluid" alt="">
+            </a>
+            <button class="navbar-toggler d-xl-none border-1 border-warning" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavId" aria-controls="offcanvasNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class=" text-white"><i class="fa-solid fa-bars"></i></span>
+            </button>
+            <div class="offcanvas offcanvas-end" id="offcanvasNavId">
+                <div class="offcanvas-header  align-items-start border-bottom border-2">
+                    <a class="navbar-brand m-0 p-0 " href="#" style="width: 50px;">
+                        <img src="../img/logo/1.png" class="img-fluid" alt="">
+                    </a>
+                    <button type="button" class="btn-close bg-light ms-auto mt-2" data-bs-dismiss="offcanvas"
+                        aria-label="close"></button>
+                </div>
+                <div class="offcanvas-body ">
+                    <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="/localstorage/pages/user/index.html"><i class="fa-solid fa-house pe-1"></i>ទំព័រដើម</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="#">កំពុងចាក់បញ្ចាំង</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="#">ចាក់បញ្ចាំងឆាប់ៗ</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="#">ម៉ោងបញ្ចាំង</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="#">កម្មវិធីប្រូម៉ូសិន</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="#">សមាជិក</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="#">រោងភាពយន្ត</a>
+                        </li>
+                    </ul>
+                    <form class="form-search d-flex my-xl-auto my-lg-0 justify-content-end position-relative ">
+                        <input class="form-control shadow-search me-sm-2 rounded-5 " type="text"
+                            placeholder="ស្វែងរក....">
+                        <button class="btn  my-auto my-sm-0 position-absolute pe-4" type="submit"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                    <div class="row">
+                        <div class="col-1 w-auto">
+                            <div class="btn-group dropstart">
+                                <a class="nav-link position-relative fs-3 text-center margin-notification text-white"
+                                    href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false"><i class="fa-regular fa-bell fa-shake"></i><span
+                                        class="bg-danger text-white fs-6 rounded-circle notification position-absolute ">4</span></a>
+                                <ul class="dropdown-menu top-100 mt-3" style="min-width: 280px;">
+                                    <li><span class="dropdown-item-text pt-2 pb-1 font-notification fs-3 text-warning">
+                                            <i class="fa-regular fa-bell fa-shake text-white"></i>
+                                            ការជូនដំណឹង
+
+                                            <hr>
+                                        </span>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">
+                                            <div class="card mb-3 border-0">
+                                                <div class="row ">
+                                                    <div class="col-9  ">
+                                                        <div class="card-body p-0">
+                                                            <h5 class="card-title pt-2">
+                                                                រឿង: ព្រះតេជគុណផ្លិតរន្ទះ
+                                                            </h5>
+                                                            <p class="card-text"><small class="text-body-secondary">
+                                                                    <i
+                                                                        class="fa-regular fa-clock fa-spin text-warning "></i>
+                                                                    <span class="ps-2 font_KH text-secondary">១
+                                                                        នាទីមុន</span>
+                                                                </small>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-3 p-0">
+                                                        <img src="../img/notification/1.JPG" class="img-fluid rounded"
+                                                            alt="..." style="height:70px;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">
+                                            <div class="card mb-3 border-0">
+                                                <div class="row ">
+                                                    <div class="col-9  ">
+                                                        <div class="card-body p-0">
+                                                            <h5 class="card-title pt-2">
+                                                                រឿង: ថ្នាក់​ ១២ ង
+                                                            </h5>
+                                                            <p class="card-text"><small class="text-body-secondary">
+                                                                    <i
+                                                                        class="fa-regular fa-clock fa-spin text-warning"></i>
+                                                                    <span class="ps-2 font_KH text-secondary">១
+                                                                        នាទីមុន</span>
+                                                                </small>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-3 p-0">
+                                                        <img src="../img/notification/2.JPG" class="img-fluid rounded"
+                                                            alt="..." style="height:70px;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">
+                                            <div class="card mb-3 border-0">
+                                                <div class="row ">
+                                                    <div class="col-9  ">
+                                                        <div class="card-body p-0">
+                                                            <h5 class="card-title pt-2">
+                                                                រឿង: ឆ្នោតផ្សងស្នេហ៏
+                                                            </h5>
+                                                            <p class="card-text"><small class="text-body-secondary">
+                                                                    <i
+                                                                        class="fa-regular fa-clock fa-spin text-warning"></i>
+                                                                    <span class="ps-2 font_KH text-secondary">3
+                                                                        នាទីមុន</span>
+                                                                </small>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-3 p-0">
+                                                        <img src="../img/notification/3.JPG" class="img-fluid rounded"
+                                                            alt="..." style="height:70px;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">
+                                            <div class="card mb-3 border-0">
+                                                <div class="row ">
+                                                    <div class="col-9  ">
+                                                        <div class="card-body p-0">
+                                                            <h5 class="card-title pt-2">
+                                                                រឿង: អាខៃ
+                                                            </h5>
+                                                            <p class="card-text"><small class="text-body-secondary">
+                                                                    <i
+                                                                        class="fa-regular fa-clock fa-spin text-warning"></i>
+                                                                    <span class="ps-2 font_KH text-secondary">5
+                                                                        នាទីមុន</span>
+                                                                </small>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-3 p-0">
+                                                        <img src="../img/notification/4.JPG" class="img-fluid rounded"
+                                                            alt="..." style="height:70px;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-1 w-auto">
+                            <button class="btn  my-2 my-sm-0 fs-3 px-0 text-white" type="button"><i
+                                    class="fa-regular fa-user px-0"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="container " style="margin-top: 8%;">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="table-responsive">
+                            <table class="table table-primary">
+                                <thead class="text-center font_dangrek fs-5 text-white border-1 border-black">
+                                    <tr>
+                                        <th scope="col" class="bg-success">Free Seat</th>
+                                        <th scope="col" class="bg-primary">Sold Out</th>
+                                        <th scope="col" class="bg-secondary text-black">Block</th>
+                                        <th scope="col" class="bg-danger">Select</th>
+                                        <th scope="col" class="bg-info">Reserved</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="col-12 bg-secondary-subtle">
+                            <h3 class="text-center py-3 font_eng">Cinema Screen</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 mt-5">
+                        <div class="table-responsive">
+                            <table class="table ">
+                                <tbody class="tbodyfont_dangrek text-center text-white d-block "
+                                    style="margin-left: 7%!important;">
+                                    <tr class="d-flex my-1">
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">A1</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">A2</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">A3</td>
+                                        <td class="me-4 px-3  bg-success rounded-2 w-1 hover-td seat">A4</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">A5</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">A7</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">A7</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">A7</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">A9</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">A10</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">A11</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">A12</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">A13</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">A14</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">A15</td>
+                                        <td class="me-4 px-3  bg-success rounded-2 w-1 hover-td seat">A17</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">A17</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">A17</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">A19</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">A20</td>
+                                    </tr>
+                                    <tr class="d-flex my-1">
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">B1</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">B2</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">B3</td>
+                                        <td class="me-4 px-3  bg-success rounded-2 w-1 hover-td seat">B4</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">B5</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">B7</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">B7</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">B7</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">B9</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">B10</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">B11</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">B12</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">B13</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">B14</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">B15</td>
+                                        <td class="me-4 px-3  bg-success rounded-2 w-1 hover-td seat">B17</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">B17</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">B17</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">B19</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">B20</td>
+                                    </tr>
+                                    <tr class="d-flex my-1">
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">C1</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">C2</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">C3</td>
+                                        <td class="me-4 px-3  bg-success rounded-2 w-1 hover-td seat">C4</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">C5</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">C7</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">C7</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">C7</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">C9</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">C10</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">C11</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">C12</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">C13</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">C14</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">C15</td>
+                                        <td class="me-4 px-3  bg-success rounded-2 w-1 hover-td seat">C17</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">C17</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">C17</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">C19</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">C20</td>
+                                    </tr>
+                                    <tr class="d-flex my-1">
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat ">D1</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">D2</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">D3</td>
+                                        <td class="me-4 px-3  bg-success rounded-2 w-1 hover-td seat">D4</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">D5</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">D7</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">D7</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">D7</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">D9</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">D10</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">D11</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">D12</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">D13</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">D14</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">D15</td>
+                                        <td class="me-4 px-3  bg-success rounded-2 w-1 hover-td seat">D17</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">D17</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">D17</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">D19</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">D20</td>
+                                    </tr>
+                                    <tr class="d-flex my-1">
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">E1</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">E2</td>
+                                        <td class="me-5 px-3  bg-success rounded-2 w-1 hover-td seat">E3</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat"
+                                            style="margin-left: 7%;">E4</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">E5</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">E7</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">E7</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">E7</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">E9</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">E10</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">E11</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">E12</td>
+                                        <td class="me-5 px-3  bg-success rounded-2 w-1 hover-td seat">E13</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat"
+                                            style="margin-left: 7%;">E14</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">E15</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">E17</td>
+                                    </tr>
+                                    <tr class="d-flex my-1">
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">F1</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">F2</td>
+                                        <td class="me-5 px-3  bg-success rounded-2 w-1 hover-td seat">F3</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat"
+                                            style="margin-left: 7%;">F4</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">F5</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">F7</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">F7</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">F7</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">F9</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">F10</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">F11</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">F12</td>
+                                        <td class="me-5 px-3  bg-success rounded-2 w-1 hover-td seat">F13</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat"
+                                            style="margin-left: 7%;">F14</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">F15</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">F17</td>
+                                    </tr>
+                                    <tr class="d-flex my-1">
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">G1</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">G2</td>
+                                        <td class="me-5 px-3  bg-success rounded-2 w-1 hover-td seat">G3</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat"
+                                            style="margin-left: 7%;">G4</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">G5</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">G7</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">G7</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">G7</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">G9</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">G10</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">G11</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">G12</td>
+                                        <td class="me-5 px-3  bg-success rounded-2 w-1 hover-td seat">G13</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat"
+                                            style="margin-left: 7%;">G14</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">G15</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">G17</td>
+                                    </tr>
+                                    <tr class="d-flex my-1">
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">H1</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">H2</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">H3</td>
+                                        <td class="me-4 px-3  bg-success rounded-2 w-1 hover-td seat">H4</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">H5</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">H7</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">H7</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">H7</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">H9</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">H10</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">H11</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">H12</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">H13</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">H14</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">H15</td>
+                                        <td class="me-4 px-3  bg-success rounded-2 w-1 hover-td seat">H17</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">H17</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">H17</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">H19</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">H20</td>
+                                    </tr>
+                                    <tr class="d-flex my-1">
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">I1</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">I2</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">I3</td>
+                                        <td class="me-4 px-3  bg-success rounded-2 w-1 hover-td seat">I4</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">I5</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">I7</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">I7</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">I7</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">I9</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">I10</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">I11</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">I12</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">I13</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">I14</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">I15</td>
+                                        <td class="me-4 px-3  bg-success rounded-2 w-1 hover-td seat">I17</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">I17</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">I17</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">I19</td>
+                                        <td class="me-1 px-3  bg-success rounded-2 w-1 hover-td seat">I20</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row bg-secondary-subtle rounded-4 py-3 overflow-hidden font_Preahvihear fs-5 my-5">
+                    <div class="col-4 font_KH text-black fs-6">
+                        <h4 class="font_dangrek py-2 text-danger">ខ្មោចអ្នកតាកាច់</h4>
+                        <p class="my-1">Hall Number <span class="mx-1 ">:</span> Hall 2</p>
+                        <p class="my-1">Show Date <span class="ms-2">:</span> Wnd, 28 / 06 / 2023</p>
+                        <p class="my-1">Duration <span class="ms-4">:</span> 1 H 53 mn</p>
+                        <p class="my-1">Subtitle <span class="ms-4">:</span> --</p>
+                        <p class="my-1">Movie rate <span>:</span> NC15</p>
+                        <p class="my-1">Movie Type <span>:</span> 2D</p>
+                        <p class="my-1">Genre <span class="ms-4">:</span> Horror</p>
+                    </div>
+                    <div class="col-4 border-end border-black  border-start">
+                        <div class="row font_dangrek">
+                            <div class="col-6 ">
+                                <p>ម៉ោងបញ្ចាំង​ - Showtime</p>
+                                <div class="col-12 bg-primary text-white text-center py-3 fs-3 rounded-3 mb-2">
+                                    18:10
+                                </div>
+                                <p>តម្លៃសំបុត្រ - Ticket</p>
+                                <div class="col-12 bg-primary text-white text-center py-3 fs-3 rounded-3 price">
+                                    0.00 USD
+                                </div>
+                            </div>
+                            <div class="col-6 ">
+                                <p>ចំនួនកៅអី - Seat sele</p>
+                                <div class="col-12 bg-primary text-white text-center py-3 fs-3 rounded-3 mb-2 amountSeat">
+                                    0
+                                </div>
+                                <p>កៅអីជួរ - Seat Row</p>
+                                <div class="col-12 bg-primary text-white text-center py-3 fs-3 rounded-3 mb-2 seatRow">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <p>ជ្រើសរើសការបង់ប្រាក់​ - Select Payment</p>
+                        <div class="col-xl-9">
+                            <div class="row g-1">
+                                <div class="col-xl-3">
+                                    <img src="../img/1.png" alt="" style="width: 100%;">
+                                </div>
+                                <div class="col-xl-3">
+                                    <img src="../img/3.jpg" alt="" style="width: 100%;">
+                                </div>
+                                <div class="col-xl-3">
+                                    <img src="../img/1.png" alt="" style="width: 100%;">
+                                </div>
+                                <div class="col-xl-3">
+                                    <img src="../img/3.png" alt="" style="width: 100%;">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="pt-3">កក់សំបុត្រទុកជាមុន - Booking Tickets</p>
+                        <div class="col-7 ">
+                            <button type="button" class="btn btn-warning w-100 py-3 rounded-3 font_KH">កក់សំបុត្រ -
+                                Booking</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container-fluid bg-footer mt-5 rounded-top-left border-warning border-top ">
+            <div class="container pt-4 pb-0">
+                <div class="row justify-content-between border-bottom border-1">
+                    <div class="col-xl-2" style="width: 100px;">
+                        <img src="../img/logo/1.png" class="img-fluid rounded-top" alt="">
+                    </div>
+                    <div class="col-xl-3 d-flex py-3">
+                        <div class="col-6">
+                            <img src="../img/logo/app.png" class="img-fluid rounded-top px-2" alt="">
+                        </div>
+                        <div class="col-xl-6">
+                            <img src="../img/logo/play.png" class="img-fluid rounded-top px-2" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row py-4">
+                    <div class="col-xl-2 card-resp">
+                        <h4 class="font_dangrek fw-bold text-info">Link</h4>
+                        <ul class="navbar-nav me-auto mb-lg-0 font_KH">
+                            <li class="nav-item py-0">
+                                <a class="nav-link py-0" href="#">
+                                    <p class="hover-rating">រឿងស្នេហា</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-0" href="#">
+                                    <p class="hover-rating">គំនូរជីវចល</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-0" href="#">
+                                    <p class="hover-rating">រឿងរន្ធត់</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-0" href="#">
+                                    <p class="hover-rating">រឿងឥណ្ឌា</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-0" href="#">
+                                    <p class="hover-rating">រឿងអឺរ៉ុប</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-3 card-resp">
+                        <h4 class="font_dangrek fw-bold text-black">​​.</h4>
+                        <ul class="navbar-nav me-auto mb-lg-0 font_KH">
+                            <li class="nav-item py-0">
+                                <a class="nav-link py-0" href="#">
+                                    <p class="hover-rating">រឿងល្បីប្រចាំឆ្នាំ២០២៣</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-0" href="#">
+                                    <p class="hover-rating">រឿងខ្មោច</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-0" href="#">
+                                    <p class="hover-rating">រឿងចិន</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-0" href="#">
+                                    <p class="hover-rating">រឿងថៃ</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-0" href="#">
+                                    <p class="hover-rating">តុកក្តា</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-2 card-resp card-resp-5s ">
+                        <h5 class="font_dangrek fw-bold text-info">ទំនាក់ទំនង</h5>
+                        <ul class="navbar-nav me-auto mb-lg-0 font_KH">
+                            <li class="nav-item py-1">
+                                <a class="nav-link py-0" href="#">
+                                    <i class="fa-brands fa-facebook hover-rating fs-4 px-3"></i><span>facebook</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-1" href="#">
+                                    <i class="fa-brands fa-youtube hover-rating fs-4 px-3"></i><span>YouTube</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-1" href="#">
+                                    <i class="fa-brands fa-instagram hover-rating fs-4 px-3"></i><span>instagram</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-1 " href="#">
+                                    <i class="fa-brands fa-telegram hover-rating fs-4 px-3"></i><span>Telegram</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-1" href="#">
+                                    <i class="fa-brands fa-twitter hover-rating fs-4 px-3"></i><span>Twitter</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link py-1" href="#">
+                                    <i class="fa-brands fa-line hover-rating fs-4 px-3"></i><span>Line</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-5 font_KH text-white">
+                        <h5 class="font_dangrek fw-bold text-info">អំពីយើង</h5>
+                        <div class="col-xl-12 d-flex">
+                            <img src="../img/logo/2.png" class="img-fluid" alt="" style="width: 35px; height: 25px;">
+                            <p class="ps-2">SH Film
+                                ជាគេហទំព័រមួយប្រភេទដែលអាចអោយអ្នកចូលចិត្តតាមដានរឿងភាគទាំងអស់អោយកាន់តែមានភាព
+                                ងាយស្រួល ព្រោះថាគេហទំព័រនះមានរឿងជាច្រើនប្រភេទហើយ​ អាចទស្សនាដោយឥតគិតថ្លៃ។
+                            </p>
+                        </div>
+                        <h5 class="py-0 font_dangrek text-info">Subcribe</h5>
+                        <div class="col-xl-12 px-5 mt-0">
+                            <input type="email" class="form-control rounded-5" id="exampleFormControlInput1"
+                                placeholder="name@example.com">
+                            <a name="" id="" class="btn btn-primary col-12 rounded-5 mt-2" href="#"
+                                role="button">Subcribe</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row bg-footer border-top pt-3">
+                    <div class="col-xl-12 font_dangrek text-center text-white py-0">
+                        <p class="pt-2">&copy;2023 រក្សាសិទ្ធគ្រប់យ៉ាងដោយ​ : យ៉ង់​ សីហា</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script>
+
+        $('.seat').on('click', function () {
+            let myarr = [];
+            if ($(this).hasClass('bg-success')) {
+                $(this).removeClass('bg-success');
+                $(this).addClass('bg-danger');
+
+                countTicket(myarr);
+            } else {
+                $(this).removeClass('bg-danger');
+                $(this).addClass('bg-success');
+
+                countTicket(myarr);
+            }
+        });
+
+        function countTicket(arr) {
+            $('tbody tr').each(function () {
+                $(this).find('.bg-danger').each(function () {
+                    arr.push($(this).text())
+                })
+            });
+
+            let countTicket = arr.length;
+            $('.price').text(countTicket * 3 + '.00 USD');
+            $('.amountSeat').text(arr.length);
+            $('.seatRow').text(arr);
+        }
+
+    </script>
+</body>
+
+</html>

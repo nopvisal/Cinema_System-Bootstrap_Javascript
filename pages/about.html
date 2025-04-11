@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    about
+    <script>
+        let data = JSON.parse(localStorage.getItem('user'));
+        console.log(data)
+        $.each(data, function(key, value){
+            let img = new Image();
+            img.src = value.img;
+            document.body.appendChild(img);
+        })
+
+    </script>
+</body>
+</html>

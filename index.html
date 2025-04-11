@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SH film / Horror - Movie</title>
+    <link rel="stylesheet" href="pages/user/css/bootstrap.css">
+    <link rel="stylesheet" href="pages/user/css/style.css">
+    <link rel="stylesheet" href="pages/user/fontawesome/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/jquery.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-xl  px-4 py-0 fixed-top font_dangrek">
+            <a class="navbar-brand m-0 p-0" href="#" style="width: 80px;">
+                <img src="pages/user/img/logo/1.png" class="img-fluid" alt="">
+            </a>
+            <button class="navbar-toggler d-xl-none border-1 border-warning" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavId" aria-controls="offcanvasNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class=" text-white"><i class="fa-solid fa-bars"></i></span>
+            </button>
+            <div class="offcanvas offcanvas-end" id="offcanvasNavId">
+                <div class="offcanvas-header  align-items-start border-bottom border-2">
+                    <a class="navbar-brand m-0 p-0 " href="#" style="width: 50px;">
+                        <img src="pages/user/img/logo/1.png" class="img-fluid" alt="">
+                    </a>
+                    <button type="button" class="btn-close bg-light ms-auto mt-2" data-bs-dismiss="offcanvas"
+                        aria-label="close"></button>
+                </div>
+                <div class="offcanvas-body ">
+                    <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="index.html"><i class="fa-solid fa-house pe-1"></i>ទំព័រដើម</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="#">កំពុងចាក់បញ្ចាំង</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="#">ចាក់បញ្ចាំងឆាប់ៗ</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="#">ម៉ោងបញ្ចាំង</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="#">កម្មវិធីប្រូម៉ូសិន</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="#">សមាជិក</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="#">រោងភាពយន្ត</a>
+                        </li>
+                    </ul>
+                    <form class="form-search d-flex my-xl-auto my-lg-0 justify-content-end position-relative ">
+                        <input class="form-control shadow-search me-sm-2 rounded-5 " type="text"
+                            placeholder="ស្វែងរក....">
+                        <button class="btn  my-auto my-sm-0 position-absolute pe-4" type="submit"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                    <div class="row">
+                        <div class="col-1 w-auto">
+                            <div class="btn-group dropstart">
+                                <a class="nav-link position-relative fs-3 text-center margin-notification text-white"
+                                    href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false"><i class="fa-regular fa-bell fa-shake"></i><span
+                                        class="bg-danger text-white fs-6 rounded-circle notification position-absolute ">4</span></a>
+                                <ul class="dropdown-menu top-100 mt-3 border-white" style="min-width: 280px;">
+                                    <li><span class="dropdown-item-text pt-2 pb-1 font-notification fs-3 text-warning">
+                                            <i class="fa-regular fa-bell fa-shake text-white"></i>
+                                            ការជូនដំណឹង
+
+                                            <hr>
+                                        </span>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">
+                                            <div class="card mb-3 border-0">
+                                                <div class="row ">
+                                                    <div class="col-9  ">
+                                                        <div class="card-body p-0">
+                                                            <h5 class="card-title pt-2">
+                                                                រឿង: ព្រះតេជគុណផ្លិតរន្ទះ
+                                                            </h5>
+                                                            <p class="card-text"><small class="text-body-secondary">
+                                                                    <i
+                                                                        class="fa-regular fa-clock fa-spin text-warning "></i>
+                                                                    <span class="ps-2 font_KH text-secondary">១
+                                                                        នាទីមុន</span>
+                                                                </small>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-3 p-0">
+                                                        <img src="pages/user/img/notification/1.JPG"
+                                                            class="img-fluid rounded" alt="..." style="height:70px;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">
+                                            <div class="card mb-3 border-0">
+                                                <div class="row ">
+                                                    <div class="col-9  ">
+                                                        <div class="card-body p-0">
+                                                            <h5 class="card-title pt-2">
+                                                                រឿង: ថ្នាក់​ ១២ ង
+                                                            </h5>
+                                                            <p class="card-text"><small class="text-body-secondary">
+                                                                    <i
+                                                                        class="fa-regular fa-clock fa-spin text-warning"></i>
+                                                                    <span class="ps-2 font_KH text-secondary">១
+                                                                        នាទីមុន</span>
+                                                                </small>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-3 p-0">
+                                                        <img src="pages/user/img/notification/2.JPG"
+                                                            class="img-fluid rounded" alt="..." style="height:70px;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">
+                                            <div class="card mb-3 border-0">
+                                                <div class="row ">
+                                                    <div class="col-9  ">
+                                                        <div class="card-body p-0">
+                                                            <h5 class="card-title pt-2">
+                                                                រឿង: ឆ្នោតផ្សងស្នេហ៏
+                                                            </h5>
+                                                            <p class="card-text"><small class="text-body-secondary">
+                                                                    <i
+                                                                        class="fa-regular fa-clock fa-spin text-warning"></i>
+                                                                    <span class="ps-2 font_KH text-secondary">3
+                                                                        នាទីមុន</span>
+                                                                </small>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-3 p-0">
+                                                        <img src="pages/user/img/notification/3.JPG"
+                                                            class="img-fluid rounded" alt="..." style="height:70px;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">
+                                            <div class="card mb-3 border-0">
+                                                <div class="row ">
+                                                    <div class="col-9  ">
+                                                        <div class="card-body p-0">
+                                                            <h5 class="card-title pt-2">
+                                                                រឿង: អាខៃ
+                                                            </h5>
+                                                            <p class="card-text"><small class="text-body-secondary">
+                                                                    <i
+                                                                        class="fa-regular fa-clock fa-spin text-warning"></i>
+                                                                    <span class="ps-2 font_KH text-secondary">5
+                                                                        នាទីមុន</span>
+                                                                </small>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-3 p-0">
+                                                        <img src="pages/user/img/notification/4.JPG"
+                                                            class="img-fluid rounded" alt="..." style="height:70px;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-1 w-auto"><a href="pages/login.html">
+                                <button class="btn" type="button" style="background-color: #FFC107; color: black;font-size: 20px;border-radius: 15px; margin-top: 8px;">Log in</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="container-fluid my-5 py-5 px-0">
+                <div class="swiper sample-slider w-100 px-0 my-3">
+                    <div class="swiper-wrapper ">
+                        <div class="swiper-slide resp-benner px-0"
+                            style="background-image: url(pages/user/img/ghosts/hero-benner/1_Daeng\ Phra\ Khanong.jpg); height: 350px;">
+                            <div class="row ps-1 py-5 position-sticky overlay-benner">
+                                <div class="col-xl-12 text-banner z-3 bottom-0 position-absolute py-3">
+                                    <h5 class="card-title font_dangrek text-warning fw-bolder fs-3">
+                                        Daeng Phra Khanong
+                                    </h5>
+                                    <button type="button"
+                                        class="btn btn-secondary btn-sm font_dangrek rounded-5 px-3">2023</button>
+                                    <button type="button"
+                                        class="btn btn-secondary btn-sm font_Preahvihear rounded-5 px-3"><i
+                                            class="fa-regular fa-clock fa-spin text-warning me-2"></i> <span>៥ម៉ោង:
+                                            ៤៥នាទី</span></button>
+                                    <button type="button" class="btn btn-secondary btn-sm rounded-5 hover-love"><i
+                                            class="fa-regular fa-heart"></i></button>
+                                    <button type="button" class="btn btn-secondary btn-sm rounded-5 hover-rating"><i
+                                            class="fa-regular fa-star"></i></button>
+                                    <div class="row mt-2">
+                                        <div class="col-xl-12 ">
+                                            <button type="button"
+                                                class="btn btn-warning mb-3 font_Preahvihear btn-sm rounded-5 px-2"><i
+                                                    class="fa-regular fa-circle-play fa-spin-pulse me-2 fs-6 "></i>លេងឥឡូវនះ</button>
+                                            <button type="button"
+                                                class="btn btn-warning mb-3 font_Preahvihear btn-sm rounded-5"><i
+                                                    class="fa-solid fa-circle-plus me-2 fs-6"></i>មើលច្រើនទៀត</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide resp-benner"
+                            style="background-image: url(pages/user/img/ghosts/hero-benner/2_pee\ mak.jpg); height: 350px;">
+                            <div class="row ps-1 py-5 position-sticky overlay-benner">
+                                <div class="col-xl-12 text-banner z-3 bottom-0 position-absolute py-3">
+                                    <h5 class="card-title font_dangrek text-warning fw-bolder fs-3">
+                                        pee mak
+                                    </h5>
+                                    <button type="button"
+                                        class="btn btn-secondary btn-sm font_dangrek rounded-5 px-3">2023</button>
+                                    <button type="button"
+                                        class="btn btn-secondary btn-sm font_Preahvihear rounded-5 px-3"><i
+                                            class="fa-regular fa-clock fa-spin text-warning me-2"></i> <span>៥ម៉ោង:
+                                            ៤៥នាទី</span></button>
+                                    <button type="button" class="btn btn-secondary btn-sm rounded-5 hover-love"><i
+                                            class="fa-regular fa-heart"></i></button>
+                                    <button type="button" class="btn btn-secondary btn-sm rounded-5 hover-rating"><i
+                                            class="fa-regular fa-star"></i></button>
+                                    <div class="row mt-2">
+                                        <div class="col-xl-12 ">
+                                            <button type="button"
+                                                class="btn btn-warning mb-3 font_Preahvihear btn-sm rounded-5 px-2"><i
+                                                    class="fa-regular fa-circle-play fa-spin-pulse me-2 fs-6 "></i>លេងឥឡូវនះ</button>
+                                            <button type="button"
+                                                class="btn btn-warning mb-3 font_Preahvihear btn-sm rounded-5"><i
+                                                    class="fa-solid fa-circle-plus me-2 fs-6"></i>មើលច្រើនទៀត</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide resp-benner"
+                            style="background-image: url(pages/user/img/ghosts/hero-benner/3_pee\ nak.jpg);  height: 350px;">
+                            <div class="row ps-1 py-5 position-sticky overlay-benner">
+                                <div class="col-xl-12 text-banner z-3 bottom-0 position-absolute py-3">
+                                    <h5 class="card-title font_dangrek text-warning fw-bolder fs-3">
+                                        pee nak
+                                    </h5>
+                                    <button type="button"
+                                        class="btn btn-secondary btn-sm font_dangrek rounded-5 px-3">2023</button>
+                                    <button type="button"
+                                        class="btn btn-secondary btn-sm font_Preahvihear rounded-5 px-3"><i
+                                            class="fa-regular fa-clock fa-spin text-warning me-2"></i> <span>៥ម៉ោង:
+                                            ៤៥នាទី</span></button>
+                                    <button type="button" class="btn btn-secondary btn-sm rounded-5 hover-love"><i
+                                            class="fa-regular fa-heart"></i></button>
+                                    <button type="button" class="btn btn-secondary btn-sm rounded-5 hover-rating"><i
+                                            class="fa-regular fa-star"></i></button>
+                                    <div class="row mt-2">
+                                        <div class="col-xl-12 ">
+                                            <button type="button"
+                                                class="btn btn-warning mb-3 font_Preahvihear btn-sm rounded-5 px-2"><i
+                                                    class="fa-regular fa-circle-play fa-spin-pulse me-2 fs-6 "></i>លេងឥឡូវនះ</button>
+                                            <button type="button"
+                                                class="btn btn-warning mb-3 font_Preahvihear btn-sm rounded-5"><i
+                                                    class="fa-solid fa-circle-plus me-2 fs-6"></i>មើលច្រើនទៀត</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide resp-benner"
+                            style="background-image: url(pages/user/img/ghosts/hero-benner/4_ក្រឡអីហ្នឹង.jpg); height: 350px;">
+                            <div class="row ps-1 py-5 position-sticky overlay-benner">
+                                <div class="col-xl-12 text-banner z-3 bottom-0 position-absolute py-3">
+                                    <h5 class="card-title font_dangrek text-warning fw-bolder fs-4">
+                                        ក្រឡអីហ្នឹង
+                                    </h5>
+                                    <button type="button"
+                                        class="btn btn-secondary btn-sm font_dangrek rounded-5 px-3">2023</button>
+                                    <button type="button"
+                                        class="btn btn-secondary btn-sm font_Preahvihear rounded-5 px-3"><i
+                                            class="fa-regular fa-clock fa-spin text-warning me-2"></i> <span>៥ម៉ោង:
+                                            ៤៥នាទី</span></button>
+                                    <button type="button" class="btn btn-secondary btn-sm rounded-5 hover-love"><i
+                                            class="fa-regular fa-heart"></i></button>
+                                    <button type="button" class="btn btn-secondary btn-sm rounded-5 hover-rating"><i
+                                            class="fa-regular fa-star"></i></button>
+                                    <div class="row mt-2">
+                                        <div class="col-xl-12 ">
+                                            <button type="button"
+                                                class="btn btn-warning mb-3 font_Preahvihear btn-sm rounded-5 px-2"><i
+                                                    class="fa-regular fa-circle-play fa-spin-pulse me-2 fs-6 "></i>លេងឥឡូវនះ</button>
+                                            <button type="button"
+                                                class="btn btn-warning mb-3 font_Preahvihear btn-sm rounded-5"><i
+                                                    class="fa-solid fa-circle-plus me-2 fs-6"></i>មើលច្រើនទៀត</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide resp-benner"
+                            style="background-image: url(pages/user/img/ghosts/hero-benner/5_ខ្មោចអ្នកតាកាច់.jpg); height: 350px;">
+                            <div class="row ps-1 py-5 position-sticky overlay-benner">
+                                <div class="col-xl-12 text-banner z-3 bottom-0 position-absolute py-3">
+                                    <h5 class="card-title font_dangrek text-warning fw-bolder fs-5">
+                                        ខ្មោចអ្នកតាកាច់
+                                    </h5>
+                                    <button type="button"
+                                        class="btn btn-secondary btn-sm font_dangrek rounded-5 px-3">2023</button>
+                                    <button type="button"
+                                        class="btn btn-secondary btn-sm font_Preahvihear rounded-5 px-3"><i
+                                            class="fa-regular fa-clock fa-spin text-warning me-2"></i> <span>៥ម៉ោង:
+                                            ៤៥នាទី</span></button>
+                                    <button type="button" class="btn btn-secondary btn-sm rounded-5 hover-love"><i
+                                            class="fa-regular fa-heart"></i></button>
+                                    <button type="button" class="btn btn-secondary btn-sm rounded-5 hover-rating"><i
+                                            class="fa-regular fa-star"></i></button>
+                                    <div class="row mt-2">
+                                        <div class="col-xl-12 ">
+                                            <button type="button"
+                                                class="btn btn-warning mb-3 font_Preahvihear btn-sm rounded-5 px-2"><i
+                                                    class="fa-regular fa-circle-play fa-spin-pulse me-2 fs-6 "></i>លេងឥឡូវនះ</button>
+                                            <button type="button"
+                                                class="btn btn-warning mb-3 font_Preahvihear btn-sm rounded-5"><i
+                                                    class="fa-solid fa-circle-plus me-2 fs-6"></i>មើលច្រើនទៀត</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide resp-benner"
+                            style="background-image: url(pages/user/img/ghosts/hero-benner/6_The\ Medium.jpg); height: 350px;">
+                            <div class="row ps-1 py-5 position-sticky overlay-benner">
+                                <div class="col-xl-12 text-banner z-3 bottom-0 position-absolute py-3">
+                                    <h5 class="card-title font_dangrek text-warning fw-bolder fs-3">
+                                        The Medium
+                                    </h5>
+                                    <button type="button"
+                                        class="btn btn-secondary btn-sm font_dangrek rounded-5 px-3">2023</button>
+                                    <button type="button"
+                                        class="btn btn-secondary btn-sm font_Preahvihear rounded-5 px-3"><i
+                                            class="fa-regular fa-clock fa-spin text-warning me-2"></i> <span>៥ម៉ោង:
+                                            ៤៥នាទី</span></button>
+                                    <button type="button" class="btn btn-secondary btn-sm rounded-5 hover-love"><i
+                                            class="fa-regular fa-heart"></i></button>
+                                    <button type="button" class="btn btn-secondary btn-sm rounded-5 hover-rating"><i
+                                            class="fa-regular fa-star"></i></button>
+                                    <div class="row mt-2">
+                                        <div class="col-xl-12 ">
+                                            <button type="button"
+                                                class="btn btn-warning mb-3 font_Preahvihear btn-sm rounded-5 px-2"><i
+                                                    class="fa-regular fa-circle-play fa-spin-pulse me-2 fs-6 "></i>លេងឥឡូវនះ</button>
+                                            <button type="button"
+                                                class="btn btn-warning mb-3 font_Preahvihear btn-sm rounded-5"><i
+                                                    class="fa-solid fa-circle-plus me-2 fs-6"></i>មើលច្រើនទៀត</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide resp-benner"
+                            style="background-image: url(pages/user/img/ghosts/hero-benner/7_Sewu\ Dino.jpg); height: 350px;">
+                            <div class="row ps-1 py-5 position-sticky overlay-benner">
+                                <div class="col-xl-12 text-banner z-3 bottom-0 position-absolute py-3">
+                                    <h5 class="card-title font_dangrek text-warning fw-bolder fs-3">
+                                        Sewu Dino
+                                    </h5>
+                                    <button type="button"
+                                        class="btn btn-secondary btn-sm font_dangrek rounded-5 px-3">2023</button>
+                                    <button type="button"
+                                        class="btn btn-secondary btn-sm font_Preahvihear rounded-5 px-3"><i
+                                            class="fa-regular fa-clock fa-spin text-warning me-2"></i> <span>៥ម៉ោង:
+                                            ៤៥នាទី</span></button>
+                                    <button type="button" class="btn btn-secondary btn-sm rounded-5 hover-love"><i
+                                            class="fa-regular fa-heart"></i></button>
+                                    <button type="button" class="btn btn-secondary btn-sm rounded-5 hover-rating"><i
+                                            class="fa-regular fa-star"></i></button>
+                                    <div class="row mt-2">
+                                        <div class="col-xl-12 ">
+                                            <button type="button"
+                                                class="btn btn-warning mb-3 font_Preahvihear btn-sm rounded-5 px-2"><i
+                                                    class="fa-regular fa-circle-play fa-spin-pulse me-2 fs-6 "></i>លេងឥឡូវនះ</button>
+                                            <button type="button"
+                                                class="btn btn-warning mb-3 font_Preahvihear btn-sm rounded-5"><i
+                                                    class="fa-solid fa-circle-plus me-2 fs-6"></i>មើលច្រើនទៀត</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide resp-benner"
+                            style="background-image: url(pages/user/img/ghosts/hero-benner/8_MatiAnak.png); height: 350px;">
+                            <div class="row ps-1 py-5 position-sticky overlay-benner">
+                                <div class="col-xl-12 text-banner z-3 bottom-0 position-absolute py-3">
+                                    <h5 class="card-title font_dangrek text-warning fw-bolder fs-3">
+                                        MatiAnak
+                                    </h5>
+                                    <button type="button"
+                                        class="btn btn-secondary btn-sm font_dangrek rounded-5 px-3">2023</button>
+                                    <button type="button"
+                                        class="btn btn-secondary btn-sm font_Preahvihear rounded-5 px-3"><i
+                                            class="fa-regular fa-clock fa-spin text-warning me-2"></i> <span>៥ម៉ោង:
+                                            ៤៥នាទី</span></button>
+                                    <button type="button" class="btn btn-secondary btn-sm rounded-5 hover-love"><i
+                                            class="fa-regular fa-heart"></i></button>
+                                    <button type="button" class="btn btn-secondary btn-sm rounded-5 hover-rating"><i
+                                            class="fa-regular fa-star"></i></button>
+                                    <div class="row mt-2">
+                                        <div class="col-xl-12 ">
+                                            <button type="button"
+                                                class="btn btn-warning mb-3 font_Preahvihear btn-sm rounded-5 px-2"><i
+                                                    class="fa-regular fa-circle-play fa-spin-pulse me-2 fs-6 "></i>លេងឥឡូវនះ</button>
+                                            <button type="button"
+                                                class="btn btn-warning mb-3 font_Preahvihear btn-sm rounded-5"><i
+                                                    class="fa-solid fa-circle-plus me-2 fs-6"></i>មើលច្រើនទៀត</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="row section-title">
+                    <div class="col-xl-3">
+                        <h3 class="font_dangrek text-warning ">
+                            កំពុងចាក់បញ្ចាំង
+                        </h3>
+                    </div>
+                </div>
+                <div class="row py-2 body">
+                    <div class="col-xl-2 px-2 py-3 card-resp">
+                        <a href="pages/user/page/booking.html">
+                            <div class="col-12 card-hover">
+                                <div class="card rounded-3 border-0 ">
+                                    <div class="overlay-card rounded-3">
+                                        <img src="img/logo/play-button.png" alt="" class="play-center ">
+                                    </div>
+                                    <img src="pages/user/img/ghosts/11_ពពិលខ្មៅ.jpg"
+                                        class="card-img-top img-fluid p-0 rounded-3 object-fit-cover  " alt="..."
+                                        style="height: 280px; ">
+ 
+                                </div>
+                            </div>
+                        </a>
+                        <div class="card-body py-2 text-white">
+                            <h5 class="card-title font_dangrek text-warning mb-0">ពពិលខ្មៅ</h5>
+                            <p class="card-text font_KH mt-2"><i class="fa-regular fa-clock pe-1"></i>01:50នាទី(2023)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 px-2 py-3 card-resp">
+                        <a href="pages/user/page/booking.html">
+                            <div class="col-12 card-hover">
+                                <div class="card rounded-3 border-0 ">
+                                    <div class="overlay-card rounded-3">
+                                        <img src="img/logo/play-button.png" alt="" class="play-center ">
+                                    </div>
+                                    <img src="pages/user/img/ghosts/12_អូតែលមរណៈ.jpg"
+                                        class="card-img-top img-fluid p-0 rounded-3 object-fit-cover  " alt="..."
+                                        style="height: 280px; ">
+ 
+                                </div>
+                            </div>
+                        </a>
+                        <div class="card-body py-2 text-white">
+                            <h5 class="card-title font_dangrek text-warning mb-0">អូតែលមរណៈ</h5>
+                            <p class="card-text font_KH mt-2"><i class="fa-regular fa-clock pe-1"></i>01:50នាទី(2023)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 px-2 py-3 card-resp">
+                        <a href="pages/user/page/booking.html">
+                            <div class="col-12 card-hover">
+                                <div class="card rounded-3 border-0 ">
+                                    <div class="overlay-card rounded-3">
+                                        <img src="img/logo/play-button.png" alt="" class="play-center ">
+                                    </div>
+                                    <img src="pages/user/img/ghosts/13_ភូមិគ្រឹះតៃហោង.jpg"
+                                        class="card-img-top img-fluid p-0 rounded-3 object-fit-cover  " alt="..."
+                                        style="height: 280px; ">
+ 
+                                </div>
+                            </div>
+                        </a>
+                        <div class="card-body py-2 text-white">
+                            <h5 class="card-title font_dangrek text-warning mb-0">ភូមិគ្រឹះតៃហោង</h5>
+                            <p class="card-text font_KH mt-2"><i class="fa-regular fa-clock pe-1"></i>01:50នាទី(2023)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 px-2 py-3 card-resp">
+                        <a href="pages/user/page/booking.html">
+                            <div class="col-12 card-hover">
+                                <div class="card rounded-3 border-0 ">
+                                    <div class="overlay-card rounded-3">
+                                        <img src="img/logo/play-button.png" alt="" class="play-center ">
+                                    </div>
+                                    <img src="pages/user/img/ghosts/14_ ព្រលប់លស់ព្រលឹង.jpg"
+                                        class="card-img-top img-fluid p-0 rounded-3 object-fit-cover  " alt="..."
+                                        style="height: 280px; ">
+ 
+                                </div>
+                            </div>
+                        </a>
+                        <div class="card-body py-2 text-white">
+                            <h5 class="card-title font_dangrek text-warning mb-0">ព្រលប់លស់ព្រលឹង</h5>
+                            <p class="card-text font_KH mt-2"><i class="fa-regular fa-clock pe-1"></i>01:50នាទី(2023)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 px-2 py-3 card-resp">
+                        <a href="pages/user/page/booking.html">
+                            <div class="col-12 card-hover">
+                                <div class="card rounded-3 border-0 ">
+                                    <div class="overlay-card rounded-3">
+                                        <img src="img/logo/play-button.png" alt="" class="play-center ">
+                                    </div>
+                                    <img src="pages/user/img/ghosts/15_កោះតៃហោង.jpg"
+                                        class="card-img-top img-fluid p-0 rounded-3 object-fit-cover  " alt="..."
+                                        style="height: 280px; ">
+ 
+                                </div>
+                            </div>
+                        </a>
+                        <div class="card-body py-2 text-white">
+                            <h5 class="card-title font_dangrek text-warning mb-0">កោះតៃហោង</h5>
+                            <p class="card-text font_KH mt-2"><i class="fa-regular fa-clock pe-1"></i>01:50នាទី(2023)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 px-2 py-3 card-resp">
+                        <a href="pages/user/page/booking.html">
+                            <div class="col-12 card-hover">
+                                <div class="card rounded-3 border-0 ">
+                                    <div class="overlay-card rounded-3">
+                                        <img src="img/logo/play-button.png" alt="" class="play-center ">
+                                    </div>
+                                    <img src="pages/user/img/ghosts/17_ផ្ទះតៃហោង.jpg"
+                                        class="card-img-top img-fluid p-0 rounded-3 object-fit-cover  " alt="..."
+                                        style="height: 280px; ">
+ 
+                                </div>
+                            </div>
+                        </a>
+                        <div class="card-body py-2 text-white">
+                            <h5 class="card-title font_dangrek text-warning mb-0">ផ្ទះតៃហោង</h5>
+                            <p class="card-text font_KH mt-2"><i class="fa-regular fa-clock pe-1"></i>01:50នាទី(2023)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    
+
+
+
+
+
+
+    <script src="pages/user/js/bootstrap.bundle.js"></script>
+</body>
+<script>
+    
+    const swiper = new Swiper('.sample-slider', {
+        loop: true,                         //loop
+        effect: "coverflow",                //applying the coverflow effect
+        slidesPerView: 3,                   //how many slides to show
+        centeredSlides: true,               //centering the first slide
+    })
+
+    //console.log(localStorage.getItem('movielist'))
+    let movielist = JSON.parse(localStorage.getItem('movielist'));
+
+    let str = '';
+    
+    if (movielist != undefined) {
+        $.each(movielist, (k, v) => {
+            str += `<div class="col-xl-2 px-2 py-3 card-resp">
+                        <a href="pages/user/page/booking.html">
+                            <div class="col-12 card-hover">
+                                <div class="card rounded-3 border-0 ">
+                                    <div class="overlay-card rounded-3">
+                                        <img src="img/logo/play-button.png" alt="" class="play-center ">
+                                    </div>
+                                    <img src="${v.img}"
+                                        class="card-img-top img-fluid p-0 rounded-3 object-fit-cover  " alt="..."
+                                        style="height: 280px; ">
+ 
+                                </div>
+                            </div>
+                        </a>
+                        <div class="card-body py-2 text-white">
+                            <h5 class="card-title font_dangrek text-warning mb-0">${v.title}</h5>
+                            <p class="card-text font_KH mt-2"><i class="fa-regular fa-clock pe-1"></i>01:50នាទី(2023)
+                            </p>
+                        </div>
+                    </div>`
+        })
+    } else {
+        str += `<h1 class="font_dangrek text-white text-center mt-5">គ្មានរឿងចាក់បញ្ចាំង</h1>`
+    }
+
+    $('.body').append(str);
+
+</script>
+<footer>
+    <div class="container-fluid bg-footer mt-5 rounded-top-left border-warning border-top ">
+        <div class="container pt-4 pb-0">
+            <div class="row justify-content-between border-bottom border-1">
+                <div class="col-xl-2" style="width: 100px;">
+                    <img src="pages/user/img/logo/1.png" class="img-fluid rounded-top" alt="">
+                </div>
+                <div class="col-xl-3 d-flex py-3">
+                    <div class="col-6">
+                        <img src="pages/user/img/logo/app.png" class="img-fluid rounded-top px-2" alt="">
+                    </div>
+                    <div class="col-xl-6">
+                        <img src="pages/user/img/logo/play.png" class="img-fluid rounded-top px-2" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="row py-4">
+                <div class="col-xl-2 card-resp">
+                    <h4 class="font_dangrek fw-bold text-info">Link</h4>
+                    <ul class="navbar-nav me-auto mb-lg-0 font_KH">
+                        <li class="nav-item py-0">
+                            <a class="nav-link py-0" href="#">
+                                <p class="hover-rating">រឿងស្នេហា</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link py-0" href="#">
+                                <p class="hover-rating">គំនូរជីវចល</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link py-0" href="#">
+                                <p class="hover-rating">រឿងរន្ធត់</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link py-0" href="#">
+                                <p class="hover-rating">រឿងឥណ្ឌា</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link py-0" href="#">
+                                <p class="hover-rating">រឿងអឺរ៉ុប</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xl-3 card-resp">
+                    <h4 class="font_dangrek fw-bold text-black">​​.</h4>
+                    <ul class="navbar-nav me-auto mb-lg-0 font_KH">
+                        <li class="nav-item py-0">
+                            <a class="nav-link py-0" href="#">
+                                <p class="hover-rating">រឿងល្បីប្រចាំឆ្នាំ២០២៣</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link py-0" href="#">
+                                <p class="hover-rating">រឿងខ្មោច</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link py-0" href="#">
+                                <p class="hover-rating">រឿងចិន</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link py-0" href="#">
+                                <p class="hover-rating">រឿងថៃ</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link py-0" href="#">
+                                <p class="hover-rating">តុកក្តា</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xl-2 card-resp card-resp-5s ">
+                    <h5 class="font_dangrek fw-bold text-info">ទំនាក់ទំនង</h5>
+                    <ul class="navbar-nav me-auto mb-lg-0 font_KH">
+                        <li class="nav-item py-1">
+                            <a class="nav-link py-0" href="#">
+                                <i class="fa-brands fa-facebook hover-rating fs-4 px-3"></i><span>facebook</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link py-1" href="#">
+                                <i class="fa-brands fa-youtube hover-rating fs-4 px-3"></i><span>YouTube</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link py-1" href="#">
+                                <i class="fa-brands fa-instagram hover-rating fs-4 px-3"></i><span>instagram</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link py-1 " href="#">
+                                <i class="fa-brands fa-telegram hover-rating fs-4 px-3"></i><span>Telegram</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link py-1" href="#">
+                                <i class="fa-brands fa-twitter hover-rating fs-4 px-3"></i><span>Twitter</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link py-1" href="#">
+                                <i class="fa-brands fa-line hover-rating fs-4 px-3"></i><span>Line</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xl-5 font_KH text-white">
+                    <h5 class="font_dangrek fw-bold text-info">អំពីយើង</h5>
+                    <div class="col-xl-12 d-flex">
+                        <img src="pages/user/img/logo/2.png" class="img-fluid" alt=""
+                            style="width: 35px; height: 25px;">
+                        <p class="ps-2">SH Film
+                            ជាគេហទំព័រមួយប្រភេទដែលអាចអោយអ្នកចូលចិត្តតាមដានរឿងភាគទាំងអស់អោយកាន់តែមានភាព
+                            ងាយស្រួល ព្រោះថាគេហទំព័រនះមានរឿងជាច្រើនប្រភេទហើយ​ អាចទស្សនាដោយឥតគិតថ្លៃ។
+                        </p>
+                    </div>
+                    <h5 class="py-0 font_dangrek text-info">Subcribe</h5>
+                    <div class="col-xl-12 px-5 mt-0">
+                        <input type="email" class="form-control rounded-5" id="exampleFormControlInput1"
+                            placeholder="name@example.com">
+                        <a name="" id="" class="btn btn-primary col-12 rounded-5 mt-2" href="#"
+                            role="button">Subcribe</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row bg-footer border-top pt-3">
+                <div class="col-xl-12 font_dangrek text-center text-white py-0">
+                    <p class="pt-2">&copy;2023 រក្សាសិទ្ធគ្រប់យ៉ាងដោយ​ : យ៉ង់​ សីហា</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>
