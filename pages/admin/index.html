@@ -218,11 +218,11 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Earnings (Monthly)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                                                Total Users:</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><h5><span id="user-count">0</span> users</h5></div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                            <i class="fas fa-user fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -236,11 +236,11 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Earnings (Annual)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
+                                                Total Movies</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><h5><span id="movie-count">0</span> Movies</h5></div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                           <i class="fas fa-film fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -358,7 +358,21 @@
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
-
+    <script>
+        $(document).ready(function () {
+            // Retrieve users from localStorage
+            let users = JSON.parse(localStorage.getItem('users')) || [];
+            let movies = JSON.parse(localStorage.getItem('movielist')) || [];
+    
+            // Get the total number of users (rows)
+            let totalRows = users.length+1;
+            let totalRow = movies.length+6;
+    
+            // Update the UI with the total count
+            $('#user-count').text(totalRows);
+            $('#movie-count').text(totalRow); // Sets the text inside the span with ID 'user-count'
+        });
+    </script>
     <script>
         $('.btn-logout').on('click', function(){
             document.cookie = "CrewCentreSession=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";

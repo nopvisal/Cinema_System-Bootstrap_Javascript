@@ -209,7 +209,7 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">DataTables</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Users DataTables</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -299,7 +299,7 @@
             let users = JSON.parse(localStorage.getItem('users')) || [];
     
             users.forEach((v) => {
-                const row = `
+                let row = `
                     <tr data-email="${v.email}">
                         <td>${v.name}</td>
                         <td>${v.email}</td>
@@ -318,13 +318,18 @@
                 if (!confirm('Are you sure you want to delete this user?')) return;
     
                 const row = $(this).closest('tr');
-                const email = row.data('email');
+                const title = row.find('td:nth-child(2)').text().trim();
     
-                // Update localStorage
-                let updated = users.filter(user => user.email !== email);
-                localStorage.setItem('users', JSON.stringify(updated));
+                // Try to remove from localStorage
+                let list = JSON.parse(localStorage.getItem('users')) || [];
+                const newList = list.filter(users => users.email !== title);
     
-                // Remove from DOM
+                // If changed, update localStorage
+                if (newList.length !== list.length) {
+                    localStorage.setItem('users', JSON.stringify(newList));
+                }
+    
+                // Remove row from table
                 row.remove();
             });
         });
