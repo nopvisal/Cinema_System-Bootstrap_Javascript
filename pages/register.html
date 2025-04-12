@@ -29,6 +29,10 @@
                             </div>
                             <form action="#" class="signin-form">
                                 <div class="form-group mt-3">
+                                    <input type="text" class="form-control" required id="email">
+                                    <label class="form-control-placeholder" for="email">Email</label>
+                                </div>
+                                <div class="form-group mt-3">
                                     <input type="text" class="form-control" required id="username">
                                     <label class="form-control-placeholder" for="username">Username</label>
                                 </div>
@@ -70,11 +74,13 @@
         }
 
         let id = new Date().getTime().toString();
+        let email = $('#email').val();
         let username = $('#username').val();
         let password = $('#password-field').val();
 
         let obj = {};
         obj.id = id;
+        obj.email = email;
         obj.name = username;
         obj.password = password;
 

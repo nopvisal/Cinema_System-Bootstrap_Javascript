@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Blank</title>
+    <title>Admin Page</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -38,14 +38,14 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3"> Admin <sup></sup></div>
             </a>
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item ">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -62,7 +62,7 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link Active" href="users.html">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Users</span></a>
@@ -209,7 +209,7 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">DataTables</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -223,50 +223,15 @@
                                         </tr>
                                     </thead>
                                     
-                                    <script>
-    
-                                        const swiper = new Swiper('.sample-slider', {
-                                            loop: true,                         //loop
-                                            effect: "coverflow",                //applying the coverflow effect
-                                            slidesPerView: 3,                   //how many slides to show
-                                            centeredSlides: true,               //centering the first slide
-                                        })
-                                    
-                                        //console.log(localStorage.getItem('movielist'))
-                                        let movielist = JSON.parse(localStorage.getItem('movielist'));
-                                    
-                                        let str = '';
-                                        
-                                        if (movielist != undefined) {
-                                            $.each(movielist, (k, v) => {
-                                                str += `<div class="col-xl-2 px-2 py-3 card-resp">
-                                                            <a href="pages/user/page/booking.html">
-                                                                <div class="col-12 card-hover">
-                                                                    <div class="card rounded-3 border-0 ">
-                                                                        <div class="overlay-card rounded-3">
-                                                                            <img src="img/logo/play-button.png" alt="" class="play-center ">
-                                                                        </div>
-                                                                        <img src="${v.img}"
-                                                                            class="card-img-top img-fluid p-0 rounded-3 object-fit-cover  " alt="..."
-                                                                            style="height: 280px; ">
-                                     
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                            <div class="card-body py-2 text-white">
-                                                                <h5 class="card-title font_dangrek text-warning mb-0">${v.title}</h5>
-                                                                <p class="card-text font_KH mt-2"><i class="fa-regular fa-clock pe-1"></i>01:50នាទី(2023)
-                                                                </p>
-                                                            </div>
-                                                        </div>`
-                                            })
-                                        } else {
-                                            str += `<h1 class="font_dangrek text-white text-center mt-5">គ្មានរឿងចាក់បញ្ចាំង</h1>`
-                                        }
-                                    
-                                        $('.body').append(str);
-                                    
-                                    </script>
+                                    <tbody class="tbody">
+                                        <tr>
+                                            <td>visal</td>
+                                            <td>nopvisal@gmail.com</td>
+                                            <td>Admin</td>
+                                            <td>Phnom Penh</td>
+                                           
+                                        </tr> 
+                                    </tbody>
                                     
                                         
                                         
@@ -326,7 +291,28 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
+    <script>
+        let users = JSON.parse(localStorage.getItem('users'));
+        let str = '';
     
+        if (users != undefined && users.length > 0) {
+            $.each(users, (k, v) => {
+                str += `
+                    <tr>
+                        <td>${v.name}</td>
+                        <td>${v.email}</td>
+                        <td>Users</td>
+                        <td>Phnom Penh</td>
+                       
+                    </tr> 
+                `;
+            });
+        } else {
+            str += `<tr><td colspan="6" class="text-center">គ្មានរឿងចាក់បញ្ចាំង</td></tr>`;
+        }
+    
+        $('.tbody').append(str);
+    </script>
 
 </body>
 
