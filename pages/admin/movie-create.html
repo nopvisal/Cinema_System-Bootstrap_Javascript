@@ -217,6 +217,10 @@
                                             aria-describedby="" placeholder="Title">
                                     </div>
                                     <div class="form-group">
+                                        <input type="text" class="form-control form-control-user time"
+                                            aria-describedby="" placeholder="Movie_Duration">
+                                    </div>
+                                    <div class="form-group">
 
                                         <input class="form-control" type="file" id="formFile">
                                     </div>
@@ -313,11 +317,13 @@
 
             let id = new Date().getTime().toString();
             let movieTitle = $('.movieTitle').val();
+            let time = $('.time').val();
             let img = avarta;
 
             let myobj = {};
             myobj.id = id
             myobj.title = movieTitle;
+            myobj.time = time;
             myobj.img = img;
 
             myarr.push(myobj);

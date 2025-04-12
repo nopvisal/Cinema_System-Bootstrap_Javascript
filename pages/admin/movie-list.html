@@ -211,34 +211,74 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" style="text-align: center;">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
+                                            <th>Picture</th>
+                                            <th>Title</th>
+                                            <th>Duration</th>
+                                            <th>ShowTime</th>
+                                            <th>Actions</th>
+                                            
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody class="movie">
                                         <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
+                                            <td ><img src="../user/img/ghosts/10_បំណន់ខ្មោច.jpg" style="width: 50px; height: 70px;"></td>
+                                            <td >បំណន់ខ្មោច</td>
+                                            <td >1:50 នាទី</td>
+                                            <td >4:30-6:10</td>
+                                            <td>                   
+                                                <button class="btn btn-sm btn-danger delete"><i class="fa fa-trash"></i></button>
+                                            </td>
+                                            
                                         </tr>
                                         <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
+                                            <td ><img src="../user/img/ghosts/11_ពពិលខ្មៅ.jpg" style="width: 50px; height: 70px;"></td>
+                                            <td >ពពិលខ្មៅ</td>
+                                            <td >1:40 នាទី</td>
+                                            <td >4:30-6:00</td>
+                                            <td>                   
+                                                <button class="btn btn-sm btn-danger delete"><i class="fa fa-trash"></i></button>
+                                            </td>
                                         </tr>
+                                        <tr>
+                                            <td ><img src="../user/img/ghosts/12_អូតែលមរណៈ.jpg" style="width: 50px; height: 70px;"></td>
+                                            <td >អូតែលមរណៈ</td>
+                                            <td >1:30 នាទី</td>
+                                            <td >4:30-6:00</td>
+                                            <td>                   
+                                                <button class="btn btn-sm btn-danger delete"><i class="fa fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td ><img src="../user/img/ghosts/13_ភូមិគ្រឹះតៃហោង.jpg" style="width: 50px; height: 70px;"></td>
+                                            <td >ភូមិគ្រឹះតៃហោង</td>
+                                            <td >1:20 នាទី</td>
+                                            <td >4:30-6:00</td>
+                                            <td>                   
+                                                <button class="btn btn-sm btn-danger delete"><i class="fa fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td ><img src="../user/img/ghosts/15_កោះតៃហោង.jpg" style="width: 50px; height: 70px;"></td>
+                                            <td >កោះតៃហោង</td>
+                                            <td >1:55 នាទី</td>
+                                            <td >4:30-6:30</td>
+                                            <td>                   
+                                                <button class="btn btn-sm btn-danger delete"><i class="fa fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td ><img src="../user/img/ghosts/16_សាកសពរស.jpg" style="width: 50px; height: 70px;"></td>
+                                            <td >សាកសពរស</td>
+                                            <td >1:35 នាទី</td>
+                                            <td >4:30-6:10</td>
+                                            <td>                   
+                                                <button class="btn btn-sm btn-danger delete"><i class="fa fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                       
                                         
                                         
                                     </tbody>
@@ -303,7 +343,50 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            let movielist = JSON.parse(localStorage.getItem('movielist')) || [];
     
+            // Append movies from localStorage
+            movielist.forEach((v, i) => {
+                let row = `
+                    <tr data-title="${v.title}">
+                        <td><img src="${v.img}" style="width: 50px; height: 70px;"></td>
+                        <td>${v.title}</td>
+                        <td>${v.time} នាទី</td>
+                        <td>4:30-6:30</td>
+                        <td>
+                            <button class="btn btn-sm btn-danger delete"><i class="fa fa-trash"></i></button>
+                        </td>
+                    </tr>
+                `;
+                $('.movie').append(row);
+            });
+    
+            // Handle delete for all rows
+            $('.movie').on('click', '.delete', function () {
+                if (!confirm('Are you sure you want to delete this movie?')) return;
+    
+                const row = $(this).closest('tr');
+                const title = row.find('td:nth-child(2)').text().trim();
+    
+                // Try to remove from localStorage
+                let list = JSON.parse(localStorage.getItem('movielist')) || [];
+                const newList = list.filter(movie => movie.title !== title);
+    
+                // If changed, update localStorage
+                if (newList.length !== list.length) {
+                    localStorage.setItem('movielist', JSON.stringify(newList));
+                }
+    
+                // Remove row from table
+                row.remove();
+            });
+        });
+    </script>
+    
+    
+   
 
 </body>
 
